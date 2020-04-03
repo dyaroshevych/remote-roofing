@@ -1,0 +1,19 @@
+.button {
+  display: inline-block;
+  border: 0;
+  background-color: #005fbd;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+
+  &--md {
+    padding: 8px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  &--lg {
+    padding: 8px 20px;
+    font-size: 22px;
+  }
+}

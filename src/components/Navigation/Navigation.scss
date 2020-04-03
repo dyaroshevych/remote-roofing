@@ -1,0 +1,32 @@
+.navigation {
+  padding: 20px 0;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    color: #181818;
+    padding: 0 7px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: border-color 0.25s ease;
+
+    &:hover {
+      border-color: #005fbd;
+    }
+
+    &-container {
+      margin-right: 30px;
+    }
+  }
+}
