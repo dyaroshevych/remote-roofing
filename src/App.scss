@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Lato";
   box-sizing: border-box;
+  line-height: 1.48;
 }
 
 ul {
@@ -17,7 +18,32 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  width: 1170px;
-  margin: 0 auto;
+input {
+  display: inline-block;
+  border: 0;
+  outline: none;
+}
+
+.heading-primary {
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 75px;
+  letter-spacing: 5px;
+}
+
+.heading-secondary {
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.heading-tertiary {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
 }

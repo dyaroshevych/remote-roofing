@@ -1,0 +1,27 @@
+.inspection-form {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+
+  &__input {
+    padding: 15px;
+    margin-right: 7px;
+    min-width: 300px;
+    border-radius: 3px;
+    font-weight: 700;
+    color: #181818;
+
+    &::placeholder {
+      font-weight: 500;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    }
+  }
+
+  &__label {
+    display: none;
+  }
+}

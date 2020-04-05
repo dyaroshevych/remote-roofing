@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Wrapper } from "../../hoc";
 import { Button, Logo } from "../";
 
 import "./Navigation.scss";
@@ -26,28 +27,39 @@ const Navigation = () => {
 
   return (
     <nav className="navigation">
-      <ul className="wrapper navigation__list">
-        <li>
-          <Logo />
-        </li>
-        <li className="navigation__links-container">
-          <ul className="navigation__links">
-            {links.map((link) => (
-              <li
-                className="navigation__link-container"
-                key={`navigation-link-${link.linkTo}`}
-              >
-                <a href={`./${link.linkTo}`} className="navigation__link">
-                  {link.name}
+      <Wrapper>
+        <ul className="navigation__list">
+          <li className="navigation__group-container">
+            <ul className="navigation__group">
+              <li className="navigation__link-container">
+                <Logo />
+              </li>
+              {links.map((link) => (
+                <li
+                  className="navigation__link-container"
+                  key={`navigation-link-${link.linkTo}`}
+                >
+                  <a href={`./${link.linkTo}`} className="navigation__link">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li className="navigation__group-container">
+            <ul className="navigation__group">
+              <li className="navigation__link-container">
+                <a href="/" className="navigation__link">
+                  Log In
                 </a>
               </li>
-            ))}
-            <li>
-              <Button size={"md"}>Free Inspection</Button>
-            </li>
-          </ul>
-        </li>
-      </ul>
+              <li className="navigation__link-container">
+                <Button size={"md"}>Free Inspection</Button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Wrapper>
     </nav>
   );
 };

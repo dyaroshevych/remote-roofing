@@ -3,12 +3,16 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
-  &__links {
+  &__group {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+
+    &-container:first-of-type li:first-of-type {
+      transform: none;
+    }
   }
 
   &__link {
@@ -26,7 +30,14 @@
     }
 
     &-container {
-      margin-right: 30px;
+      transform: translateY(-9px);
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
     }
+  }
+
+  .button {
+    transform: translateY(6px);
   }
 }
