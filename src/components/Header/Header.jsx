@@ -23,7 +23,7 @@ const Header = () => {
         <div className="header__text-container">
           <div className="header__text-container-item">
             <h1 className="heading-primary">
-              Any roof,
+              Any Roof,
               <br />
               Anywhere
             </h1>

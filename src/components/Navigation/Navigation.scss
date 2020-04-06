@@ -1,18 +1,17 @@
 .navigation {
-  padding: 20px 0;
+  height: 85px;
+  padding-bottom: 30px;
+  margin: 30px;
+  border-bottom: 2px solid #eee;
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
   }
 
   &__group {
     display: flex;
-    align-items: flex-end;
-
-    &-container:first-of-type li:first-of-type {
-      transform: none;
-    }
+    align-items: center;
   }
 
   &__link {
@@ -30,14 +29,9 @@
     }
 
     &-container {
-      transform: translateY(-9px);
       &:not(:last-of-type) {
         margin-right: 25px;
       }
     }
-  }
-
-  .button {
-    transform: translateY(6px);
   }
 }

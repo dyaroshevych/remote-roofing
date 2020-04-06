@@ -1,13 +1,8 @@
 .header {
   position: relative;
-  padding: 100px 0;
+  padding: 220px 20px;
+  margin: 30px;
   background-color: rgba(0, 0, 0, 0.7);
-  margin: 0 20px;
-
-  &,
-  &__background {
-    border-radius: 7px;
-  }
 
   &__background {
     position: absolute;
