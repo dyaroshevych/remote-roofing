@@ -1,20 +1,20 @@
-.navigation {
+.Navigation {
   height: 85px;
   padding-bottom: 30px;
   margin: 30px;
   border-bottom: 2px solid #eee;
-  &__list {
+  &_list {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__group {
+  &_group {
     display: flex;
     align-items: center;
   }
 
-  &__link {
+  &_link {
     position: relative;
     font-weight: 700;
     font-size: 16px;
@@ -28,7 +28,7 @@
       border-color: #005fbd;
     }
 
-    &-container {
+    &Container {
       &:not(:last-of-type) {
         margin-right: 25px;
       }

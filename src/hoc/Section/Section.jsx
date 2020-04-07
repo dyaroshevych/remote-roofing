@@ -1,9 +1,13 @@
 import React from "react";
 
-import "./Section.scss";
+import classes from "./Section.module.scss";
 
 const Section = ({ className, children }) => (
-  <section className={`section${className ? ` ${className}` : ""}`}>
+  <section
+    className={
+      className ? [classes.Section, className].join(" ") : classes.Section
+    }
+  >
     {children}
   </section>
 );

@@ -4,7 +4,7 @@ import { InspectionForm } from "../";
 import { Wrapper } from "../../hoc";
 
 import headerBgJpg from "../../assets/img/header-bg.jpg";
-import "./Header.scss";
+import classes from "./Header.module.scss";
 
 const Header = () => {
   const inspectionFormInputRef = useRef(null);
@@ -14,22 +14,22 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className={classes.Header}>
       <div
-        className="header__background"
+        className={classes.Header_background}
         style={{ backgroundImage: `url(${headerBgJpg})` }}
       ></div>
       <Wrapper>
-        <div className="header__text-container">
-          <div className="header__text-container-item">
-            <h1 className="heading-primary">
+        <div className={classes.Header_textContainer}>
+          <div className={classes.Header_textContainerItem}>
+            <h1>
               Any Roof,
               <br />
               Anywhere
             </h1>
           </div>
-          <div className="header__text-container-item">
-            <h3 className="heading-tertiary">
+          <div className={classes.Header_textContainerItem}>
+            <h3>
               Roof inspections in seconds using satellite imagery.
               <br />
               Let Remote Roofing help you.

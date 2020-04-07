@@ -2,13 +2,13 @@ import React from "react";
 
 import { Button } from "../";
 
-import "./InspectionForm.scss";
+import classes from "./InspectionForm.module.scss";
 
 const InspectionForm = ({ source, forwardedRef = null }) => (
-  <form method="POST" action="/" className="inspection-form">
+  <form method="POST" action="/" className={classes.InspectionForm}>
     <label
       htmlFor={`${source}-inspection-form`}
-      className="inspection-form__label"
+      className={classes.InspectionForm_label}
     >
       Enter your address to start!
     </label>
@@ -16,7 +16,7 @@ const InspectionForm = ({ source, forwardedRef = null }) => (
       type="email"
       placeholder="Enter your address to start!"
       required
-      className="inspection-form__input"
+      className={classes.InspectionForm_input}
       id={`${source}-inspection-form`}
       ref={forwardedRef}
     />

@@ -1,0 +1,12 @@
+.Section {
+  padding: 70px 0;
+
+  &:nth-of-type(even) {
+    background-color: #f5fafb;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+}

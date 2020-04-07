@@ -1,9 +1,15 @@
 import React from "react";
 
-import "./Wrapper.scss";
+import classes from "./Wrapper.module.scss";
 
 const Wrapper = ({ className, children }) => (
-  <div className={`wrapper${className ? ` ${className}` : ""}`}>{children}</div>
+  <div
+    className={
+      className ? [classes.Wrapper, className].join(" ") : classes.Wrapper
+    }
+  >
+    {children}
+  </div>
 );
 
 export default Wrapper;

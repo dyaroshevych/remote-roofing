@@ -1,10 +1,10 @@
-.header {
+.Header {
   position: relative;
   padding: 220px 20px;
   margin: 30px;
   background-color: rgba(0, 0, 0, 0.7);
 
-  &__background {
+  &_background {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,11 +16,11 @@
     z-index: -1;
   }
 
-  &__text-container {
+  &_textContainer {
     display: flex;
     color: #fff;
 
-    &-item {
+    &Item {
       width: 50%;
     }
   }

@@ -24,26 +24,26 @@ input {
   outline: none;
 }
 
-.heading-primary {
+h1 {
   font-weight: 900;
   font-size: 75px;
   line-height: 75px;
   letter-spacing: 5px;
 }
 
-.heading-secondary {
-  font-weight: 700;
-  font-size: 25px;
+h2 {
+  font-weight: 400;
+  font-size: 30px;
   text-transform: uppercase;
 }
 
-.heading-tertiary {
+h3 {
   font-weight: 400;
   font-size: 22px;
 }
 
-.paragraph {
-  font-weight: 400;
+p {
+  font-weight: 300;
   font-size: 16px;
   line-height: 25px;
 }

@@ -2,8 +2,12 @@ import React from "react";
 
 import { Section, Wrapper } from "../../hoc";
 
-import { satellite, contract, joist } from "../../assets/img/icons";
-import "./HowItWorks.scss";
+import {
+  satellite,
+  contract,
+  joist,
+} from "../../assets/img/icons/how-it-works";
+import classes from "./HowItWorks.module.scss";
 
 const HowItWorksSection = () => {
   const process = [
@@ -27,24 +31,27 @@ const HowItWorksSection = () => {
     },
   ];
   return (
-    <Section className="how-it-works">
-      <Wrapper className="how-it-works__content">
-        {process.map(({ iconLink, name, description }, idx) => (
-          <div className="how-it-works__step" key={idx}>
-            <div className="how-it-works__step-image-container">
-              <img
-                src={iconLink}
-                alt={name}
-                className="how-it-works__step-image"
-              />
+    <Section className={classes.HowItWorks}>
+      <Wrapper>
+        <h2>How it Works</h2>
+        <div className={classes.HowItWorks_process}>
+          {process.map(({ iconLink, name, description }, idx) => (
+            <div className={classes.HowItWorks_step} key={idx}>
+              <div className={classes.HowItWorks_stepImageContainer}>
+                <img
+                  src={iconLink}
+                  alt={name}
+                  className={classes.HowItWorks_stepImage}
+                />
+              </div>
+              <h3>
+                <span>Step {idx + 1}: </span>
+                {name}
+              </h3>
+              <p>{description}</p>
             </div>
-            <h3 className="heading-tertiary">
-              <span>Step {idx + 1}: </span>
-              {name}
-            </h3>
-            <p className="paragraph">{description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </Wrapper>
     </Section>
   );

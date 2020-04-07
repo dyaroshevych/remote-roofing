@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Navigation, Header, HowItWorks } from "./components";
+import { Navigation, Header, HowItWorks, Services } from "./components";
 
 import "./App.scss";
 
@@ -10,6 +10,7 @@ function App() {
       <Navigation />
       <Header />
       <HowItWorks />
+      <Services />
     </div>
   );
 }

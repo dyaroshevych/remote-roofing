@@ -3,7 +3,7 @@ import React from "react";
 import { Wrapper } from "../../hoc";
 import { Button, Logo } from "../";
 
-import "./Navigation.scss";
+import classes from "./Navigation.module.scss";
 
 const Navigation = () => {
   const links = [
@@ -20,40 +20,43 @@ const Navigation = () => {
       linkTo: "commercial",
     },
     {
-      name: "Storm Damage",
-      linkTo: "storm-damage",
+      name: "Contact",
+      linkTo: "contact",
     },
   ];
 
   return (
-    <nav className="navigation">
+    <nav className={classes.Navigation}>
       <Wrapper>
-        <ul className="navigation__list">
-          <li className="navigation__group-container">
-            <ul className="navigation__group">
-              <li className="navigation__link-container">
+        <ul className={classes.Navigation_list}>
+          <li className={classes.Navigation_groupContainer}>
+            <ul className={classes.Navigation_group}>
+              <li className={classes.Navigation_linkContainer}>
                 <Logo />
               </li>
               {links.map((link) => (
                 <li
-                  className="navigation__link-container"
+                  className={classes.Navigation_linkContainer}
                   key={`navigation-link-${link.linkTo}`}
                 >
-                  <a href={`./${link.linkTo}`} className="navigation__link">
+                  <a
+                    href={`./${link.linkTo}`}
+                    className={classes.Navigation_link}
+                  >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </li>
-          <li className="navigation__group-container">
-            <ul className="navigation__group">
-              <li className="navigation__link-container">
-                <a href="/" className="navigation__link">
+          <li className={classes.Navigation_groupContainer}>
+            <ul className={classes.Navigation_group}>
+              <li className={classes.Navigation_linkContainer}>
+                <a href="/" className={classes.Navigation_link}>
                   Log In
                 </a>
               </li>
-              <li className="navigation__link-container">
+              <li className={classes.Navigation_linkContainer}>
                 <Button size={"md"}>Free Inspection</Button>
               </li>
             </ul>

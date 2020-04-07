@@ -1,9 +1,11 @@
 import React from "react";
 
-import "./Button.scss";
+import classes from "./Button.module.scss";
 
 const Button = ({ size, children }) => (
-  <button className={`button button--${size}`}>{children}</button>
+  <button className={[classes.Button, classes[`Button--${size}`]].join(" ")}>
+    {children}
+  </button>
 );
 
 export default Button;
