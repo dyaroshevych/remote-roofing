@@ -8,8 +8,7 @@
   }
 
   &_item {
-    width: 33.3333%;
-    padding: 0 15px;
+    width: calc(33.3333% - 30px);
 
     &:nth-of-type(n + 4) {
       margin-top: 60px;

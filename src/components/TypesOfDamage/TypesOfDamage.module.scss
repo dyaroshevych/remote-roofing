@@ -1,0 +1,36 @@
+.TypesOfDamage {
+  &_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    width: calc(50% - 30px);
+    display: flex;
+
+    &:nth-of-type(n + 3) {
+      margin-top: 60px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 60px;
+    }
+
+    &Icon {
+      width: 50px;
+
+      &Container {
+        margin-right: 20px;
+      }
+    }
+
+    &TextContainer {
+      h3 {
+        margin-bottom: 16px;
+        font-weight: 700;
+        color: #005fbd;
+      }
+    }
+  }
+}

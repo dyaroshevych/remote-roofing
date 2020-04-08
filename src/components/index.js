@@ -5,3 +5,4 @@ export { default as InspectionForm } from "./InspectionForm/InspectionForm";
 export { default as Logo } from "./Logo/Logo";
 export { default as Navigation } from "./Navigation/Navigation";
 export { default as Services } from "./Services/Services";
+export { default as TypesOfDamage } from "./TypesOfDamage/TypesOfDamage";

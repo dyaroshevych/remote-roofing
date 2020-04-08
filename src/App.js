@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Navigation, Header, HowItWorks, Services } from "./components";
+import {
+  Navigation,
+  Header,
+  HowItWorks,
+  Services,
+  TypesOfDamage,
+} from "./components";
 
 import "./App.scss";
 
@@ -11,6 +17,7 @@ function App() {
       <Header />
       <HowItWorks />
       <Services />
+      <TypesOfDamage />
     </div>
   );
 }
