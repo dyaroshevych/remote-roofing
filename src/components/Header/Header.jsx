@@ -21,24 +21,16 @@ const Header = () => {
       ></div>
       <Wrapper>
         <div className={classes.Header_textContainer}>
-          <div className={classes.Header_textContainerItem}>
-            <h1>
-              Any Roof,
-              <br />
-              Anywhere
-            </h1>
-          </div>
-          <div className={classes.Header_textContainerItem}>
-            <h3>
-              Roof inspections in seconds using satellite imagery.
-              <br />
-              Let Remote Roofing help you.
-            </h3>
-            <InspectionForm
-              source="header"
-              forwardedRef={inspectionFormInputRef}
-            />
-          </div>
+          <h1>Any Roof, Anywhere</h1>
+          <h3>
+            Roof inspections in seconds using satellite imagery.
+            <br />
+            Let Remote Roofing help you.
+          </h3>
+          <InspectionForm
+            source="header"
+            forwardedRef={inspectionFormInputRef}
+          />
         </div>
       </Wrapper>
     </header>
