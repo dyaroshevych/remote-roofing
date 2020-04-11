@@ -17,18 +17,15 @@
   }
 
   &_textContainer {
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    h1 {
-      margin-bottom: 15px;
-    }
-
+    h1,
     h3 {
+      color: #fff;
       margin-bottom: 15px;
     }
   }
