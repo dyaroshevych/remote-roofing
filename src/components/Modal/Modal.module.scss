@@ -1,0 +1,16 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 3;
+  transition: top 0.25s linear, transform 0.25s linear;
+
+  &[isvisible="true"] {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

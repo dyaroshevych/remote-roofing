@@ -27,10 +27,7 @@ const Header = () => {
             <br />
             Let Remote Roofing help you.
           </h3>
-          <InspectionForm
-            source="header"
-            forwardedRef={inspectionFormInputRef}
-          />
+          <InspectionForm forwardedRef={inspectionFormInputRef} />
         </div>
       </Wrapper>
     </header>
