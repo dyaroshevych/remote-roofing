@@ -7,7 +7,7 @@ import { Field, Button } from "../";
 const ContactForm = ({ address }) => {
   const fields = [
     {
-      name: "Address",
+      name: "address",
       value: address,
       placeholder: "Address",
       isRequired: true,
@@ -21,9 +21,9 @@ const ContactForm = ({ address }) => {
       maxChars: 40,
     },
     {
-      name: "email",
-      type: "email",
-      placeholder: "Email",
+      name: "phone",
+      type: "tel",
+      placeholder: "Phone number",
       isRequired: true,
       maxChars: 70,
     },

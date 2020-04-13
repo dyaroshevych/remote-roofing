@@ -22,7 +22,7 @@ const Field = ({
         defaultValue={value}
         placeholder={placeholder}
         maxLength={maxChars}
-        rows="4"
+        rows="3"
         id={`field_${name}`}
         readOnly={isReadonly}
       ></textarea>
