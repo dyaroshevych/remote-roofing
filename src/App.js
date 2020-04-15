@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import {
   Navigation,
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <HashRouter basename="/">
+      <Router>
         <Switch>
           <Route exact path="/">
             <Header
@@ -47,7 +47,7 @@ function App() {
             />
           </Route>
         </Switch>
-      </HashRouter>
+      </Router>
     </div>
   );
 }
