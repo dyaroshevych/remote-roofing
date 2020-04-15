@@ -1,14 +1,15 @@
 .Backdrop {
   position: fixed;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 2;
-  cursor: pointer;
+  transition: all 0.25s linear;
 
   &[isvisible="true"] {
     opacity: 1;
