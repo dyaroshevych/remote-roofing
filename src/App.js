@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import {
   Navigation,
@@ -16,9 +16,9 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Router>
+      <HashRouter basename="/">
         <Switch>
-          <Route path="/" exact>
+          <Route exact path="/">
             <Header
               title="Any Roof, Anywhere"
               subText={[
@@ -47,7 +47,7 @@ function App() {
             />
           </Route>
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
