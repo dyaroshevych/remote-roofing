@@ -8,12 +8,8 @@ import classes from "./Navigation.module.scss";
 const Navigation = () => {
   const links = [
     {
-      name: "Why Remote Roofing?",
-      linkTo: "why-remote-roofing",
-    },
-    {
-      name: "Residentual",
-      linkTo: "residentual",
+      name: "Residential",
+      linkTo: "residential",
     },
     {
       name: "Commercial",
@@ -57,7 +53,7 @@ const Navigation = () => {
                 </a>
               </li>
               <li className={classes.Navigation_linkContainer}>
-                <Button size={"md"}>Free Inspection</Button>
+                <Button size={"md"}>Get Inspection</Button>
               </li>
             </ul>
           </li>

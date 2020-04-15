@@ -10,3 +10,4 @@ export { default as TypesOfDamage } from "./TypesOfDamage/TypesOfDamage";
 export { default as Field } from "./Field/Field";
 export { default as Modal } from "./Modal/Modal";
 export { default as Backdrop } from "./Backdrop/Backdrop";
+export { default as Residential } from "./Residential/Residential";

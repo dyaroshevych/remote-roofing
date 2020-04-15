@@ -3,10 +3,10 @@ import React, { useRef, useEffect } from "react";
 import { InspectionForm } from "../";
 import { Wrapper } from "../../hoc";
 
-import headerBgJpg from "../../assets/img/header-bg.jpg";
+import { headerBgJpg } from "../../assets/img";
 import classes from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ title, subText = [] }) => {
   const inspectionFormInputRef = useRef(null);
 
   useEffect(() => {
@@ -21,12 +21,10 @@ const Header = () => {
       ></div>
       <Wrapper>
         <div className={classes.Header_textContainer}>
-          <h1>Any Roof, Anywhere</h1>
-          <h3>
-            Roof inspections in seconds using satellite imagery.
-            <br />
-            Let Remote Roofing help you.
-          </h3>
+          <h1>{title}</h1>
+          {subText.map((text, idx) => (
+            <h3 key={idx}>{text}</h3>
+          ))}
           <InspectionForm forwardedRef={inspectionFormInputRef} />
         </div>
       </Wrapper>

@@ -18,14 +18,21 @@ const ContactForm = ({ address }) => {
       name: "name",
       placeholder: "Name",
       isRequired: true,
-      maxChars: 40,
+      maxChars: 60,
+    },
+    {
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+      isRequired: true,
+      maxChars: 100,
     },
     {
       name: "phone",
       type: "tel",
       placeholder: "Phone number",
       isRequired: true,
-      maxChars: 70,
+      maxChars: 30,
     },
     {
       name: "name",

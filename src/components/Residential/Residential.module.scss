@@ -1,0 +1,32 @@
+.Residential {
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:not(:last-of-type) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &_image {
+    width: 100%;
+    &Container {
+      width: calc(58% - 40px);
+    }
+  }
+
+  &_textContainer {
+    width: calc(42% - 40px);
+
+    h2 {
+      text-align: left;
+      margin-bottom: 20px;
+      color: #005fbd;
+    }
+  }
+}
