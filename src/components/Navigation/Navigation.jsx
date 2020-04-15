@@ -36,7 +36,7 @@ const Navigation = () => {
                   key={`navigation-link-${link.linkTo}`}
                 >
                   <a
-                    href={`./${link.linkTo}`}
+                    href={`#/${link.linkTo}`}
                     className={classes.Navigation_link}
                   >
                     {link.name}
@@ -48,7 +48,7 @@ const Navigation = () => {
           <li className={classes.Navigation_groupContainer}>
             <ul className={classes.Navigation_group}>
               <li className={classes.Navigation_linkContainer}>
-                <a href="/" className={classes.Navigation_link}>
+                <a href="#/" className={classes.Navigation_link}>
                   Log In
                 </a>
               </li>
