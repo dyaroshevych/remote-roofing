@@ -2,13 +2,12 @@ import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import {
-  Navigation,
-  Header,
-  HowItWorks,
-  Services,
-  TypesOfDamage,
-  Residential,
-} from "./components";
+  HomePage,
+  ResidentialPage,
+  CommercialPage,
+  ContactPage,
+} from "./components/pages";
+import { Navigation, Inspection } from "./components/sections";
 
 import "./App.scss";
 
@@ -19,32 +18,18 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header
-              title="Any Roof, Anywhere"
-              subText={[
-                "Roof inspections in seconds using satellite imagery.",
-                "Let Remote Roofing help you.",
-              ]}
-            />
-            <HowItWorks />
-            <Services />
-            <TypesOfDamage />
+            <HomePage />
+            <Inspection />
           </Route>
           <Route path="/residential">
-            <Header title="Residential Roofing" />
-            <Residential />
+            <ResidentialPage />
+            <Inspection />
           </Route>
           <Route path="/commercial">
-            <Header title="Coming soon!" />
+            <CommercialPage />
           </Route>
           <Route path="/contact">
-            <Header
-              title="Get in touch with Remote Roofing"
-              subText={[
-                "Fill out the form and we'll be in touch as soon as possible.",
-                "Our team is happy to answer your sales questions.",
-              ]}
-            />
+            <ContactPage />
           </Route>
         </Switch>
       </Router>

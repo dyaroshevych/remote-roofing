@@ -8,6 +8,16 @@ body {
   font-family: "Lato";
   box-sizing: border-box;
   line-height: 1.48;
+
+  &::-webkit-scrollbar {
+    background-color: #fff;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #005fbd;
+    border-radius: 4px;
+  }
 }
 
 ul {

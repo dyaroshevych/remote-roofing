@@ -1,0 +1,18 @@
+.ContactForm {
+  &___inline {
+    text-align: center;
+  }
+
+  h3 {
+    color: #181818;
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin-top: 50px;
+  }
+
+  &_field:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}

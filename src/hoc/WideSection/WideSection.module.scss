@@ -1,0 +1,16 @@
+.WideSection {
+  padding: 70px 0;
+  background-color: #024864;
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: #fff;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

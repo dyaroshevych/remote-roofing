@@ -1,0 +1,21 @@
+.ContactPage {
+  h1,
+  h3 {
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_header {
+    padding-bottom: 100px;
+  }
+}
+
+.ContactFormContainer {
+  margin: 0 auto;
+  width: 540px;
+  padding: 40px;
+  transform: translateY(-80px);
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
