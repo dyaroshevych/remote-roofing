@@ -1,0 +1,44 @@
+.Footer {
+  padding: 70px 0;
+
+  &_container {
+    display: flex;
+    align-items: center;
+  }
+
+  &_item {
+    width: 25%;
+  }
+
+  &_linkContainer {
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &_social {
+    &List {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &Item {
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+
+      &Icon {
+        width: 40px;
+      }
+    }
+  }
+
+  h3 {
+    color: #005fbd;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #181818;
+  }
+}

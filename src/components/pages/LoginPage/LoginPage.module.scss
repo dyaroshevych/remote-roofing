@@ -1,0 +1,37 @@
+.LoginPage {
+  width: 600px;
+
+  &_divider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: calc(50% - 20px);
+      height: 2px;
+      background-color: rgb(211, 211, 211);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 16px;
+  }
+
+  &_Button {
+    background-color: #181818;
+  }
+}

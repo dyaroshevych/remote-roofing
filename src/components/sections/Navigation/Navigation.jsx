@@ -7,7 +7,6 @@ import { Button, Logo } from "../../UI";
 import classes from "./Navigation.module.scss";
 
 const Navigation = withRouter(({ location }) => {
-  console.log(location);
   const links = [
     {
       name: "Residential",
@@ -38,7 +37,7 @@ const Navigation = withRouter(({ location }) => {
                   key={`navigation-link-${linkTo}`}
                 >
                   <a
-                    href={`#${linkTo}`}
+                    href={`/#${linkTo}`}
                     className={classes.Navigation_link}
                     active={String(linkTo === location.pathname)}
                   >

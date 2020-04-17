@@ -1,33 +1,43 @@
 .Services {
   background-color: #f5fafb;
 
-  &_container {
+  &_item {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-  }
+    align-items: center;
 
-  &_item {
-    width: calc(33.3333% - 30px);
+    &:not(:last-of-type) {
+      margin-bottom: 80px;
+    }
 
-    &:nth-of-type(n + 4) {
-      margin-top: 60px;
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    &ImageContainer {
+      width: calc(40% - 40px);
+    }
+
+    &TextContainer {
+      width: calc(60% - 40px);
+
+      h3 {
+        color: #005fbd;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: #024864;
+        margin-bottom: 30px;
+      }
     }
 
     &Image {
-      width: 64px;
-      border-radius: 100%;
+      width: 100%;
       border: 1px solid #eee;
       margin-bottom: 15px;
-    }
-
-    h3 {
-      color: #005fbd;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #024864;
+      box-shadow: 0 3px 7px -2px rgba(0, 0, 0, 0.2);
+      border: 15px solid #fff;
     }
   }
 }

@@ -8,8 +8,8 @@ import {
   hailSvg,
   pipeSvg,
   windSvg,
-} from "../../../assets/img/icons/typesOfDamage";
-import classes from "./TypesOfDamage.module.scss";
+} from "../../../assets/img/icons/about";
+import classes from "./AboutUs.module.scss";
 
 const TypesOfDamage = () => {
   const types = [
@@ -48,7 +48,7 @@ const TypesOfDamage = () => {
   return (
     <Section className={classes.TypesOfDamage}>
       <Wrapper>
-        <h2 className="heading___secondary">Types of Roofing Damage</h2>
+        <h2>About Us</h2>
         <div className={classes.TypesOfDamage_container}>
           {types.map((item, idx) => (
             <div key={idx} className={classes.TypesOfDamage_item}>

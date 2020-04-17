@@ -5,7 +5,7 @@ import { Button, Modal, ContactForm } from "../";
 
 import classes from "./InspectionForm.module.scss";
 
-const InspectionForm = ({ forwardedRef = null }) => {
+const InspectionForm = ({ forwardedRef }) => {
   const [formInfo, setFormInfo] = useState({ address: "", isVisible: false });
 
   const changeAddressHandler = (address) => {
@@ -24,6 +24,8 @@ const InspectionForm = ({ forwardedRef = null }) => {
       info.isVisible = !info.isVisible;
 
       setFormInfo(info);
+    } else if (forwardedRef) {
+      forwardedRef.current.focus();
     }
   };
 

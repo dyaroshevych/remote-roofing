@@ -1,93 +1,35 @@
 import React from "react";
 
 import { Wrapper, Section } from "../../../hoc";
+import { Button } from "../../UI";
 
 import classes from "./Services.module.scss";
-import {
-  asphaltPng,
-  cedarPng,
-  commercialPng,
-  copperPng,
-  flatPng,
-  metalPng,
-  repairPng,
-  replacePng,
-  slatePng,
-} from "../../../assets/img/icons/services";
+import { residentialJpg, commercialJpg } from "../../../assets/img/services";
 
 const Services = () => {
   const services = [
     {
-      iconUrl: replacePng,
-      name: "Roof Replacement",
-      description:
-        "We specialize in asphalt roof replacement services, including shingle removal, and vent replacement.",
+      name: "Residential Roofing",
+      description: `Here at Remote Roofing, we understand how much our customers
+        value their home and how integral a roof is in protecting that home. This is why our
+        professionals make sure that the job gets done correctly and with the attention that we
+        would put into our own home. Remote Roofing is at the forefront of roofing technology and
+        trends, which will help you save time and money when you have an issue with your roof.
+        From start to finish, Remote Roofing provides you with great service that you deserve.`,
+      imageUrl: residentialJpg,
+      linkTo: "/residential",
     },
     {
-      iconUrl: commercialPng,
       name: "Commercial roofing",
-      description:
-        "Our commercial roofers offer a variety of services, including repairs, replacement, and maintenance.",
-    },
-    {
-      iconUrl: repairPng,
-      name: "Roof repair",
-      description:
-        "If you need a roof replacement - fast, our contractors can assess and repair your roof, so you can better plan for your replacement.",
-    },
-    {
-      iconUrl: copperPng,
-      name: "Copper roofing",
-      description:
-        "Copper features and roofs are works of art. Our Copper Roofing experts have years of experience complementing the beauty of the homes they're applied to.",
-    },
-    {
-      iconUrl: metalPng,
-      name: "Metal roofing",
-      description:
-        "Metal roofs are beautiful, but also have a longevity far exceeding traditional asphalt roofs. We can assist in pricing your metal roofing project, and find you a vetted, local contractor.",
-    },
-    {
-      iconUrl: asphaltPng,
-      name: "Asphalt roofing",
-      description:
-        "Asphalt roofs are very common, and will provide great coverage for years to come. Most of our clients have asphalt shingles, we've helped them select the best product for their budget and aesthetic desires.",
-    },
-    {
-      iconUrl: cedarPng,
-      name: "Cedar roofing",
-      description:
-        "Strong, rustic, timeless. Cedar is one of the toughest woods and an eco-friendly solution to your roof replacement. They are insulating and architecturally appealing, a lasting solution you'll always love!",
-    },
-    {
-      iconUrl: slatePng,
-      name: "Slate roofing",
-      description:
-        "Slate roofs have a magical appeal, and a beauty that is unrivaled. Another eco friendly solution, that can last 5 times as long as asphalt roofs, and provide your house with a roof that will likely last a lifetime.",
-    },
-    {
-      iconUrl: flatPng,
-      name: "Flat roofing",
-      description:
-        "Residential and commercial flat roofs, including apartments and housing units, warehouses, and factories require maintenance, repair, and sometimes replacement. We work with the best roofers in your area, providing you additional coverage and security in your roof replacement.",
-    },
-    {
-      iconUrl: asphaltPng,
-      name: "Tile roofing",
-      description:
-        "The beauty that you desire, with the longevity that you deserve. We work with the industries best installers to give you a tile roofing product that will look amazing while giving you decades of that timeless curb appeal.",
-    },
-    {
-      iconUrl: asphaltPng,
-      name: "TPO roofing",
-      description:
-        "TPO is one of the most popular flat roofing materials out there at the moment. This is a single ply application that stretches over the entire roof, and is not only energy efficient, but also a bit more economical than other roofing systems.",
-    },
-    {
-      iconUrl: asphaltPng,
-      name: "EPDM roofing",
-      description:
-        "EPDM is a very popular single ply flat roofing option for you or your building. It is a synthetic rubber commonly used in single-ply roofing because it is simple to apply that is covered in adhesive, and factory applied tape, resulting in a faster installation.",
+      description: `No matter what type of business you own, roofing leaks and damages
+        can disrupt your business and even cause it to close. Remote Roofing helps assess your
+        building to see if you’re at risk and to address the issue before it happens. The last thing you
+        want is to be in a legal battle with your insurance over the value of equipment and
+        merchandise that you have lost. Get ahead of the game and get your free, remote inspection
+        today.
+        `,
+      imageUrl: commercialJpg,
+      linkTo: "/commercial",
     },
   ];
 
@@ -96,15 +38,22 @@ const Services = () => {
       <Wrapper>
         <h2>Services</h2>
         <div className={classes.Services_container}>
-          {services.map((service) => (
-            <div key={service.name} className={classes.Services_item}>
-              <img
-                src={service.iconUrl}
-                alt={service.name}
-                className={classes.Services_itemImage}
-              />
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
+          {services.map(({ name, description, imageUrl, linkTo }) => (
+            <div key={name} className={classes.Services_item}>
+              <div className={classes.Services_itemImageContainer}>
+                <img
+                  src={imageUrl}
+                  alt={name}
+                  className={classes.Services_itemImage}
+                />
+              </div>
+              <div className={classes.Services_itemTextContainer}>
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <a href={`/#${linkTo}`}>
+                  <Button size="md">Read more</Button>
+                </a>
+              </div>
             </div>
           ))}
         </div>

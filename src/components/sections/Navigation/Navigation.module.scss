@@ -24,23 +24,23 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: -3px;
+      bottom: -5px;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
-      height: 1px;
+      height: 2px;
       background-color: #005fbd;
       transition: width 0.25s ease;
     }
 
     &:hover::after,
     &[active="true"]::after {
-      width: 50%;
+      width: 30px;
     }
 
     &Container {
       &:not(:last-of-type) {
-        margin-right: 35px;
+        margin-right: 50px;
       }
     }
   }

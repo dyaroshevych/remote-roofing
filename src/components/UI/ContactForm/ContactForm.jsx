@@ -4,7 +4,7 @@ import classes from "./ContactForm.module.scss";
 
 import { Field, Button } from "../";
 
-const ContactForm = ({ title, appearance = "inline", fields }) => (
+const ContactForm = ({ title, appearance = "inline", fields = [] }) => (
   <form
     className={[
       classes.ContactForm,

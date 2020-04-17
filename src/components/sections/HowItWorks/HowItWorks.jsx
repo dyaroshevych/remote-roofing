@@ -31,8 +31,9 @@ const HowItWorksSection = () => {
     },
   ];
   return (
-    <Section className={classes.HowItWorks}>
+    <Section className={classes.HowItWorks} title="How it works">
       <Wrapper>
+        <h2>How it Works</h2>
         <div className={classes.HowItWorks_process}>
           {process.map(({ iconLink, name, description }, idx) => (
             <div className={classes.HowItWorks_step} key={idx}>

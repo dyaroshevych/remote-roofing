@@ -1,9 +1,0 @@
-export { default as asphaltPng } from "./asphalt.png";
-export { default as cedarPng } from "./cedar.png";
-export { default as commercialPng } from "./commercial.png";
-export { default as copperPng } from "./copper.png";
-export { default as flatPng } from "./flat.png";
-export { default as metalPng } from "./metal.png";
-export { default as repairPng } from "./repair.png";
-export { default as replacePng } from "./replace.png";
-export { default as slatePng } from "./slate.png";

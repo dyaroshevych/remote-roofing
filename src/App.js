@@ -6,8 +6,9 @@ import {
   ResidentialPage,
   CommercialPage,
   ContactPage,
+  LoginPage,
 } from "./components/pages";
-import { Navigation, Inspection } from "./components/sections";
+import { Navigation, Footer } from "./components/sections";
 
 import "./App.scss";
 
@@ -21,11 +22,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
-            <Inspection />
           </Route>
           <Route path="/residential">
             <ResidentialPage />
-            <Inspection />
           </Route>
           <Route path="/commercial">
             <CommercialPage />
@@ -33,7 +32,11 @@ function App() {
           <Route path="/contact">
             <ContactPage />
           </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
