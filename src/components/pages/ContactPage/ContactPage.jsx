@@ -1,17 +1,19 @@
 import React from "react";
 
-import { WideSection, Wrapper } from "../../../hoc";
+import { Section, Wrapper } from "../../../hoc";
 import { ContactForm } from "../../UI";
 
 import classes from "./ContactPage.module.scss";
 
 const ContactPage = () => (
   <div className={classes.ContactPage}>
-    <WideSection className={classes.ContactPage_header}>
-      <h1>Get in touch with Remote Roofing</h1>
-      <h3>Fill out the form and we'll be in touch as soon as possible.</h3>
-      <h3>Our team is happy to answer your sales questions.</h3>
-    </WideSection>
+    <Section className={classes.ContactPage_header}>
+      <Wrapper>
+        <h1>Get in touch with Remote Roofing</h1>
+        <h3>Fill out the form and we'll be in touch as soon as possible.</h3>
+        <h3>Our team is happy to answer your sales questions.</h3>
+      </Wrapper>
+    </Section>
     <Wrapper>
       <div className={classes.ContactFormContainer}>
         <ContactForm

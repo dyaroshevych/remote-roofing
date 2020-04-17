@@ -14,8 +14,10 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Navigation />
       <Router>
+        <Route path="/">
+          <Navigation />
+        </Route>
         <Switch>
           <Route exact path="/">
             <HomePage />

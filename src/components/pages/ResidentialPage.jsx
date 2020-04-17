@@ -6,7 +6,7 @@ const ResidentialPage = () => (
   <>
     <Header
       title="Residential Roofing"
-      subText={["Let Remote Roofing help you"]}
+      subText={["Let Remote Roofing help you."]}
     />
     <Residential />
     <Services />

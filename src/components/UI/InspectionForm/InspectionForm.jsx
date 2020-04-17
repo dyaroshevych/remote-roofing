@@ -11,7 +11,9 @@ const InspectionForm = ({ forwardedRef = null }) => {
   const changeAddressHandler = (address) => {
     const info = { ...formInfo };
     info.address = address;
-    info.isVisible = true;
+    if (address.length > 0) {
+      info.isVisible = true;
+    }
 
     setFormInfo(info);
   };
@@ -47,6 +49,7 @@ const InspectionForm = ({ forwardedRef = null }) => {
             type: "address",
           }}
           onChange={({ suggestion }) => changeAddressHandler(suggestion.value)}
+          onClear={() => changeAddressHandler("")}
         />
         <Button
           size="lg"

@@ -1,5 +1,22 @@
 .Inspection {
+  text-align: center;
+  background-color: #005fbd !important;
+
+  h2,
+  p {
+    color: #fff;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
   p {
     margin-bottom: 40px;
+  }
+
+  button:nth-child(3) {
+    background-color: #fff;
+    color: #005fbd;
   }
 }
