@@ -37,7 +37,7 @@ const Navigation = withRouter(({ location }) => {
                   key={`navigation-link-${linkTo}`}
                 >
                   <a
-                    href={`/#${linkTo}`}
+                    href={`#${linkTo}`}
                     className={classes.Navigation_link}
                     active={String(linkTo === location.pathname)}
                   >

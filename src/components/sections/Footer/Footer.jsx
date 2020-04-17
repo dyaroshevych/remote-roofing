@@ -64,7 +64,7 @@ const Footer = () => {
             <ul>
               {items.map(({ name, link }) => (
                 <li key={link} className={classes.Footer_linkContainer}>
-                  <a href={`/#${link}`}>{name}</a>
+                  <a href={`#${link}`}>{name}</a>
                 </li>
               ))}
             </ul>
@@ -74,7 +74,7 @@ const Footer = () => {
           <ul className={classes.Footer_socialList}>
             {social.map(({ name, icon, link }) => (
               <li key={link} className={classes.Footer_socialItem}>
-                <a href={`/#${link}`}>
+                <a href={link}>
                   <img
                     className={classes.Footer_socialItemIcon}
                     src={icon}
