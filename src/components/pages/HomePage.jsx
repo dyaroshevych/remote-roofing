@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Header, HowItWorks, Services, AboutUs, Inspection } from "../sections";
+import {
+  Header,
+  HowItWorks,
+  Services,
+  TypesOfDamage,
+  Inspection,
+} from "../sections";
 
 const HomePage = () => (
   <>
@@ -13,7 +19,7 @@ const HomePage = () => (
     />
     <HowItWorks />
     <Services />
-    <AboutUs />
+    <TypesOfDamage />
     <Inspection />
   </>
 );

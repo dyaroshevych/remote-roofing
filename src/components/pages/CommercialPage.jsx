@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Header, AboutUs, Residential, Inspection } from "../sections";
+import {
+  Header,
+  TypesOfDamage,
+  Residential,
+  Inspection,
+  TypesOfRoofing,
+} from "../sections";
 
 const CommercialPage = () => (
   <>
@@ -9,7 +15,8 @@ const CommercialPage = () => (
       subText={["Let Remote Roofing help you."]}
     />
     <Residential />
-    <AboutUs />
+    <TypesOfRoofing />
+    <TypesOfDamage />
     <Inspection />
   </>
 );

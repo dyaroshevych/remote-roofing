@@ -7,7 +7,8 @@
   }
 
   &_header {
-    padding-bottom: 100px;
+    padding: 100px 20px;
+    margin: 30px;
     text-align: center;
     background-color: #005fbd;
     color: #fff;
@@ -18,7 +19,7 @@
   margin: 0 auto;
   width: 540px;
   padding: 40px;
-  transform: translateY(-80px);
+  transform: translateY(-110px);
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
