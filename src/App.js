@@ -18,23 +18,25 @@ const App = () => (
       <Route path="/">
         <Navigation />
       </Route>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/residential">
-          <ResidentialPage />
-        </Route>
-        <Route path="/commercial">
-          <CommercialPage />
-        </Route>
-        <Route path="/contact">
-          <ContactPage />
-        </Route>
-        <Route path="/login">
-          <LoginPage />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/residential">
+            <ResidentialPage />
+          </Route>
+          <Route path="/commercial">
+            <CommercialPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/login">
+            <LoginPage />
+          </Route>
+        </Switch>
+      </main>
       <Footer />
     </Router>
   </div>

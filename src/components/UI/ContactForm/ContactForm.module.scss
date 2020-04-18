@@ -10,6 +10,12 @@
 
   button {
     margin-top: 50px;
+
+    &[aria-label="focus"],
+    &[aria-label="clear"] {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
   }
 
   &_field:not(:last-of-type) {
