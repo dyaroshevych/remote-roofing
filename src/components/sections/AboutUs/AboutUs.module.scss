@@ -1,0 +1,27 @@
+.AboutUs {
+  &_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_textContainer {
+    width: calc(60% - 40px);
+    h2 {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  &_logoContainer {
+    width: calc(40% - 40px);
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+    border: 15px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 80px;
+    }
+  }
+}

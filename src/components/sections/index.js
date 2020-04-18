@@ -7,3 +7,4 @@ export { default as Residential } from "./Residential/Residential";
 export { default as Inspection } from "./Inspection/Inspection";
 export { default as Footer } from "./Footer/Footer";
 export { default as TypesOfRoofing } from "./TypesOfRoofing/TypesOfRoofing";
+export { default as AboutUs } from "./AboutUs/AboutUs";
