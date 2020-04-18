@@ -64,7 +64,7 @@ const Footer = () => {
             <ul>
               {items.map(({ name, link }) => (
                 <li key={link} className={classes.Footer_linkContainer}>
-                  <a href={`${link}`}>{name}</a>
+                  <a href={`#${link}`}>{name}</a>
                 </li>
               ))}
             </ul>
