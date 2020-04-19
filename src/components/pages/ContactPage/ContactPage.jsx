@@ -17,6 +17,7 @@ const ContactPage = () => (
     <Wrapper>
       <div className={classes.ContactFormContainer}>
         <ContactForm
+          submit="https://formspree.io/mvobjqar"
           appearance="box"
           fields={[
             {
@@ -46,7 +47,7 @@ const ContactPage = () => (
               maxLength: 30,
             },
             {
-              name: "name",
+              name: "notes",
               type: "textarea",
               placeholder: "Notes (optional)",
             },

@@ -71,6 +71,7 @@ const Navigation = withRouter(({ location }) => {
                   changeVisibility={changeVisibilityHandler}
                 >
                   <ContactForm
+                    submit="https://formspree.io/xaydgbjk"
                     title="Get Inspection"
                     fields={[
                       {
@@ -100,7 +101,7 @@ const Navigation = withRouter(({ location }) => {
                         maxLength: 30,
                       },
                       {
-                        name: "name",
+                        name: "notes",
                         type: "textarea",
                         placeholder: "Notes (optional)",
                       },

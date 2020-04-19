@@ -4,13 +4,13 @@ import classes from "./ContactForm.module.scss";
 
 import { Field, Button } from "../";
 
-const ContactForm = ({ title, appearance = "inline", fields = [] }) => (
+const ContactForm = ({ submit, title, appearance = "inline", fields = [] }) => (
   <form
     className={[
       classes.ContactForm,
       classes[`ContactForm___${appearance}`],
     ].join(" ")}
-    action="/"
+    action={submit}
     method="POST"
   >
     {title && <h3>{title}</h3>}

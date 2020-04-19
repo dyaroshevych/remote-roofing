@@ -68,6 +68,7 @@ const InspectionForm = ({ forwardedRef }) => {
         changeVisibility={changeVisibilityHandler}
       >
         <ContactForm
+          submit="https://formspree.io/xaydgbjk"
           title="Get Inspection"
           fields={[
             {
@@ -99,7 +100,7 @@ const InspectionForm = ({ forwardedRef }) => {
               maxLength: 30,
             },
             {
-              name: "name",
+              name: "notes",
               type: "textarea",
               placeholder: "Notes (optional)",
             },
