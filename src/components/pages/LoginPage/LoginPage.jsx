@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Section, Wrapper } from "../../../hoc";
-import { Button, ContactForm } from "../../UI";
+import { Button, Form } from "../../UI";
 
 import classes from "./LoginPage.module.scss";
 
@@ -9,7 +9,7 @@ const LoginPage = () => (
   <div>
     <Section>
       <Wrapper className={classes.LoginPage}>
-        <ContactForm
+        <Form
           title="Sign into your Remote Roofing account"
           appearance="box"
           fields={[

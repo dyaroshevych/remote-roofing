@@ -1,27 +1,57 @@
+@import "../../../index.scss";
+
 .AboutUs {
   &_container {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-lg {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &_textContainer {
     width: calc(60% - 40px);
+
+    @include tablet-lg {
+      width: 450px;
+    }
+
+    @include mobile-md {
+      width: 100%;
+    }
+
     h2 {
       margin-bottom: 20px;
       text-align: left;
+
+      @include tablet-lg {
+        text-align: center;
+      }
     }
   }
 
   &_logoContainer {
     width: calc(40% - 40px);
     box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
-    border: 15px solid #fff;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @include tablet-lg {
+      box-shadow: none;
+      padding-top: 0;
+    }
+
     img {
       height: 90px;
+
+      @include tablet-lg {
+        height: 60px;
+      }
     }
   }
 }

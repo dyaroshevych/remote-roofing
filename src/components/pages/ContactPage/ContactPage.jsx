@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Section, Wrapper } from "../../../hoc";
-import { ContactForm } from "../../UI";
+import { Form } from "../../UI";
 
 import classes from "./ContactPage.module.scss";
 
@@ -15,8 +15,8 @@ const ContactPage = () => (
       </Wrapper>
     </Section>
     <Wrapper>
-      <div className={classes.ContactFormContainer}>
-        <ContactForm
+      <div className={classes.FormContainer}>
+        <Form
           submit="https://formspree.io/mvobjqar"
           appearance="box"
           fields={[

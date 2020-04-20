@@ -70,7 +70,11 @@ const Footer = () => {
             </ul>
           </div>
         ))}
-        <div className={classes.Footer_item}>
+        <div
+          className={[classes.Footer_item, classes.Footer_socialContainer].join(
+            " "
+          )}
+        >
           <ul className={classes.Footer_socialList}>
             {social.map(({ name, icon, link }) => (
               <li key={link} className={classes.Footer_socialItem}>

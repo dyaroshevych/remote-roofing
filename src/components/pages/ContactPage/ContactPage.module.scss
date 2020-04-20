@@ -1,8 +1,16 @@
+@import "../../../index.scss";
+
 .ContactPage {
   h1,
   h3 {
     &:last-of-type {
       margin-bottom: 20px;
+    }
+  }
+
+  h3 {
+    @include mobile-md {
+      display: none;
     }
   }
 
@@ -12,6 +20,20 @@
     text-align: center;
     background-color: #005fbd;
     color: #fff;
+
+    @include tablet-md {
+      padding: 70px 20px;
+      margin: 15px;
+    }
+
+    @include tablet-sm {
+      padding: 70px 5px;
+    }
+
+    @include mobile-lg {
+      padding: 70px 0;
+      margin: 0;
+    }
   }
 }
 
@@ -22,4 +44,20 @@
   transform: translateY(-110px);
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  @include tablet-md {
+    transform: translateY(-70px);
+  }
+
+  @include mobile-lg {
+    width: 100%;
+  }
+
+  @include mobile-md {
+    padding: 20px;
+  }
+
+  @include mobile-sm {
+    padding: 20px 10px;
+  }
 }

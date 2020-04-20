@@ -1,3 +1,5 @@
+@import "./index.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   line-height: 1.48;
 
   &::-webkit-scrollbar {
-    background-color: #fff;
+    background-color: #eee;
     width: 8px;
   }
 
@@ -28,6 +30,10 @@ textarea {
 
 main {
   margin-top: 120px;
+
+  @include mobile-lg {
+    margin-top: 100px;
+  }
 }
 
 ul {
@@ -36,6 +42,13 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
 }
 
 input {
@@ -49,6 +62,16 @@ h1 {
   font-size: 60px;
   line-height: 60px;
   letter-spacing: 5px;
+
+  @include tablet-md {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  @include mobile-md {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 h2 {
@@ -70,4 +93,9 @@ p {
 .ap-dropdown-menu {
   height: 0;
   padding-bottom: 230px;
+}
+
+.ap-icon-pin,
+.ap-icon-clear {
+  margin: 0 !important;
 }

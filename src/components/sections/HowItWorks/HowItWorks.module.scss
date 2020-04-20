@@ -1,7 +1,19 @@
+@import "../../../index.scss";
+
 .HowItWorks {
+  padding-top: 70px;
   &_process {
     display: flex;
     justify-content: space-between;
+
+    @include tablet-lg {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    @include tablet-md {
+      justify-content: center;
+    }
   }
 
   &_step {
@@ -12,6 +24,51 @@
     box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #181818;
+
+    @include laptop {
+      width: calc(33.3333% - 15px);
+      padding: 20px;
+    }
+
+    @include tablet-lg {
+      width: 40%;
+
+      &:last-of-type {
+        margin-top: 40px;
+      }
+    }
+
+    @include tablet-md {
+      width: calc(50% - 15px);
+
+      &:first-of-type {
+        margin-right: 30px;
+      }
+
+      &:last-of-type {
+        margin-top: 30px;
+      }
+    }
+
+    @include mobile-lg {
+      width: 400px;
+
+      &:first-of-type {
+        margin-right: 0;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+    }
+
+    @include mobile-md {
+      width: 300px;
+    }
+
+    @include mobile-sm {
+      width: 100%;
+    }
 
     &Image {
       max-height: 60px;

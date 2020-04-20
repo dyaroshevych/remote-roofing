@@ -9,7 +9,10 @@ const Modal = ({ isVisible, changeVisibility, children }) => {
     <>
       <Backdrop {...{ isVisible, changeVisibility }} />
       <div className={classes.Modal} isvisible={String(isVisible)}>
-        <div className={classes.Modal_close} onClick={changeVisibility}></div>
+        <button
+          className={classes.Modal_close}
+          onClick={changeVisibility}
+        ></button>
         {children}
       </div>
     </>

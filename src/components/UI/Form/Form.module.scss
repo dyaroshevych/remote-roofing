@@ -1,4 +1,6 @@
-.ContactForm {
+@import "../../../index.scss";
+
+.Form {
   &___inline {
     text-align: center;
   }
@@ -11,14 +13,21 @@
   button {
     margin-top: 50px;
 
+    @include mobile-md {
+      margin-top: 30px;
+    }
+
     &[aria-label="focus"],
     &[aria-label="clear"] {
-      margin-top: 0;
-      margin-bottom: 7px;
+      transform: translateY(-5px);
     }
   }
 
   &_field:not(:last-of-type) {
     margin-bottom: 30px;
+
+    @include mobile-md {
+      margin-bottom: 20px;
+    }
   }
 }

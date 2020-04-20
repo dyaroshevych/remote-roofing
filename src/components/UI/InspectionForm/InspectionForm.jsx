@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AlgoliaPlaces from "algolia-places-react";
 
-import { Button, Modal, ContactForm } from "../";
+import { Button, Modal, Form } from "../";
 
 import classes from "./InspectionForm.module.scss";
 
@@ -67,7 +67,7 @@ const InspectionForm = ({ forwardedRef }) => {
         isVisible={formInfo.isVisible}
         changeVisibility={changeVisibilityHandler}
       >
-        <ContactForm
+        <Form
           submit="https://formspree.io/xaydgbjk"
           title="Get Inspection"
           fields={[

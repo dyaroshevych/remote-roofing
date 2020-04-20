@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 
 import { Wrapper } from "../../../hoc";
-import { Button, Logo, Modal, ContactForm } from "../../UI";
+import { Button, Logo } from "../../UI";
+import { MobileNavigation, NavigationForm } from "./";
 
 import classes from "./Navigation.module.scss";
 
@@ -24,7 +25,7 @@ const Navigation = withRouter(({ location }) => {
 
   const [formVisible, setFormVisible] = useState(false);
 
-  const changeVisibilityHandler = () => setFormVisible(!formVisible);
+  const toggleFormHandler = () => setFormVisible(!formVisible);
 
   return (
     <nav className={classes.Navigation}>
@@ -32,9 +33,7 @@ const Navigation = withRouter(({ location }) => {
         <ul className={classes.Navigation_list}>
           <li className={classes.Navigation_groupContainer}>
             <ul className={classes.Navigation_group}>
-              <li className={classes.Navigation_linkContainer}>
-                <Logo />
-              </li>
+              <Logo />
               {links.map(({ name, linkTo }) => (
                 <li
                   className={classes.Navigation_linkContainer}
@@ -62,56 +61,26 @@ const Navigation = withRouter(({ location }) => {
                   Log In
                 </a>
               </li>
-              <li className={classes.Navigation_linkContainer}>
-                <Button size={"md"} click={changeVisibilityHandler}>
-                  Get Inspection
-                </Button>
-                <Modal
-                  isVisible={formVisible}
-                  changeVisibility={changeVisibilityHandler}
-                >
-                  <ContactForm
-                    submit="https://formspree.io/xaydgbjk"
-                    title="Get Inspection"
-                    fields={[
-                      {
-                        name: "address",
-                        placeholder: "Address",
-                        required: true,
-                        maxLength: 200,
-                      },
-                      {
-                        name: "name",
-                        placeholder: "Name",
-                        required: true,
-                        maxLength: 60,
-                      },
-                      {
-                        name: "email",
-                        type: "email",
-                        placeholder: "Email",
-                        required: true,
-                        maxLength: 100,
-                      },
-                      {
-                        name: "phone",
-                        type: "tel",
-                        placeholder: "Phone number",
-                        required: true,
-                        maxLength: 30,
-                      },
-                      {
-                        name: "notes",
-                        type: "textarea",
-                        placeholder: "Notes (optional)",
-                      },
-                    ]}
-                  />
-                </Modal>
-              </li>
+              <Button size={"md"} click={toggleFormHandler}>
+                Get Inspection
+              </Button>
             </ul>
           </li>
         </ul>
+        <NavigationForm
+          visible={formVisible}
+          toggleVisibility={toggleFormHandler}
+        />
+        <MobileNavigation
+          links={[
+            ...links,
+            {
+              name: "Log in",
+              linkTo: "/login",
+            },
+          ]}
+          {...{ location }}
+        />
       </Wrapper>
     </nav>
   );

@@ -1,13 +1,68 @@
+@import "../../../index.scss";
+
 .Footer {
   padding: 70px 0;
+
+  @include tablet-lg {
+    padding: 40px 0;
+  }
 
   &_container {
     display: flex;
     align-items: center;
+
+    @include tablet-md {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include mobile-lg {
+      justify-content: space-evenly;
+    }
+
+    @include mobile-md {
+      justify-content: center;
+    }
+
+    @include mobile-sm {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &_item {
     width: 25%;
+
+    @include mobile-lg {
+      width: fit-content;
+
+      &:first-of-type {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      &:nth-of-type(2) {
+        margin-right: 40px;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 40px;
+      }
+    }
+
+    @include mobile-md {
+      &:nth-of-type(2) {
+        margin-right: 30px;
+      }
+    }
+
+    @include mobile-sm {
+      &:nth-of-type(2) {
+        margin-right: 0;
+      }
+    }
   }
 
   &_linkContainer {
@@ -17,9 +72,21 @@
   }
 
   &_social {
+    &Container {
+      @include tablet-md {
+        width: 100%;
+        margin-top: 40px;
+      }
+    }
+
     &List {
       display: flex;
       justify-content: flex-end;
+
+      @include tablet-md {
+        width: fit-content;
+        margin: 0 auto;
+      }
     }
 
     &Item {

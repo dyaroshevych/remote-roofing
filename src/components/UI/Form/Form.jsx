@@ -1,21 +1,18 @@
 import React from "react";
 
-import classes from "./ContactForm.module.scss";
+import classes from "./Form.module.scss";
 
 import { Field, Button } from "../";
 
-const ContactForm = ({ submit, title, appearance = "inline", fields = [] }) => (
+const Form = ({ submit, title, appearance = "inline", fields = [] }) => (
   <form
-    className={[
-      classes.ContactForm,
-      classes[`ContactForm___${appearance}`],
-    ].join(" ")}
+    className={[classes.Form, classes[`Form___${appearance}`]].join(" ")}
     action={submit}
     method="POST"
   >
     {title && <h3>{title}</h3>}
     {fields.map((field, idx) => (
-      <div className={classes.ContactForm_field} key={idx}>
+      <div className={classes.Form_field} key={idx}>
         <Field {...{ ...field, appearance }} />
       </div>
     ))}
@@ -23,4 +20,4 @@ const ContactForm = ({ submit, title, appearance = "inline", fields = [] }) => (
   </form>
 );
 
-export default ContactForm;
+export default Form;

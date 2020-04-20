@@ -1,5 +1,19 @@
+@import "../../../index.scss";
+
 .LoginPage {
   width: 600px;
+
+  @include mobile-lg {
+    width: 450px;
+  }
+
+  @include mobile-md {
+    width: 300px;
+  }
+
+  @include mobile-sm {
+    width: calc(100% - 30px);
+  }
 
   &_divider {
     position: relative;

@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .TypesOfRoofing {
   background-color: #f5fafb;
 
@@ -5,6 +7,19 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include tablet-md {
+      justify-content: space-around;
+    }
+
+    @include mobile-lg {
+      justify-content: space-between;
+    }
+
+    @include mobile-md {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &_item {
@@ -12,6 +27,57 @@
 
     &:nth-of-type(n + 4) {
       margin-top: 60px;
+    }
+
+    @include tablet-lg {
+      width: calc(33.3333% - 15px);
+    }
+
+    @include tablet-md {
+      width: 40%;
+
+      &:nth-of-type(n + 4) {
+        margin-top: 0;
+      }
+
+      &:nth-of-type(n + 3) {
+        margin-top: 60px;
+      }
+
+      &:nth-of-type(odd) {
+        margin-right: 45px;
+      }
+    }
+
+    @include tablet-sm {
+      width: calc(50% - 15px);
+
+      &:nth-of-type(odd) {
+        margin-right: 30px;
+      }
+    }
+
+    @include mobile-md {
+      width: 290px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.1);
+
+      &:nth-of-type(n + 3) {
+        margin-top: 0;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+
+      &:nth-of-type(odd) {
+        margin-right: 0;
+      }
+    }
+
+    @include mobile-sm {
+      width: 100%;
     }
 
     &Image {

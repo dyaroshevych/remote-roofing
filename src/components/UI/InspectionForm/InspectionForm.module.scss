@@ -1,12 +1,32 @@
+@import "../../../index.scss";
+
 .InspectionForm {
   display: flex;
   justify-content: center;
+
+  @include mobile-md {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &_input {
     padding: 15px;
     min-width: 350px;
     border-radius: 3px;
     color: #181818;
+
+    @include tablet-sm {
+      padding: 10px;
+      min-width: 250px;
+    }
+
+    @include mobile-md {
+      width: 300px;
+    }
+
+    @include mobile-sm {
+      width: 100%;
+    }
   }
 
   &_label {
@@ -17,5 +37,10 @@
 
   button {
     margin-left: 7px;
+
+    @include mobile-md {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 }

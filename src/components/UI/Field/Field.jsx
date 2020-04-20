@@ -1,5 +1,4 @@
 import React from "react";
-import AlgoliaPlaces from "algolia-places-react";
 
 import { Input, Textarea } from "./";
 

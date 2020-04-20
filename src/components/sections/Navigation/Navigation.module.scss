@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .Navigation {
   position: fixed;
   z-index: 3;
@@ -7,8 +9,12 @@
   background-color: #fff;
   height: 85px;
   padding: 20px 30px 80px;
-  margin-bottom: 30px;
   box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
+
+  @include laptop {
+    padding: 20px 0 80px;
+  }
+
   &_list {
     display: flex;
     justify-content: space-between;
@@ -18,6 +24,12 @@
   &_group {
     display: flex;
     align-items: center;
+
+    button {
+      @include mobile-md {
+        display: none;
+      }
+    }
   }
 
   &_link {
@@ -45,8 +57,14 @@
     }
 
     &Container {
-      &:not(:last-of-type) {
-        margin-right: 50px;
+      margin-left: 40px;
+
+      &:last-of-type {
+        margin-right: 40px;
+      }
+
+      @include tablet-lg {
+        display: none;
       }
     }
   }
