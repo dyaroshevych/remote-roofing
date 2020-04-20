@@ -1,11 +1,11 @@
 import React from "react";
 
-import logoPng from "../../../assets/img/logo.png";
+import { logoSvg } from "../../../assets/img";
 import classes from "./Logo.module.scss";
 
 const Logo = () => (
   <a href="#/">
-    <img src={logoPng} alt="Remote Roofing" className={classes.Logo} />
+    <img src={logoSvg} alt="Remote Roofing" className={classes.Logo} />
   </a>
 );
 
