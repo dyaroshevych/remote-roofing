@@ -75,7 +75,7 @@ const Navigation = withRouter(({ location }) => {
           links={[
             ...links,
             {
-              name: "Log in",
+              name: "Log In",
               linkTo: "/login",
             },
           ]}
