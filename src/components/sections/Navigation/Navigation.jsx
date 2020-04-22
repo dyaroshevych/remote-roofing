@@ -40,7 +40,7 @@ const Navigation = withRouter(({ location }) => {
                   key={`navigation-link-${linkTo}`}
                 >
                   <a
-                    href={`#${linkTo}`}
+                    href={`${linkTo}`}
                     className={classes.Navigation_link}
                     active={String(linkTo === location.pathname)}
                   >
@@ -54,7 +54,7 @@ const Navigation = withRouter(({ location }) => {
             <ul className={classes.Navigation_group}>
               <li className={classes.Navigation_linkContainer}>
                 <a
-                  href="#/login"
+                  href="/login"
                   className={classes.Navigation_link}
                   active={String("/login" === location.pathname)}
                 >

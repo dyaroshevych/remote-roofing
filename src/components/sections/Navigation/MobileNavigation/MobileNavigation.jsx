@@ -32,7 +32,7 @@ const MobileNavigation = ({ links, location }) => {
             >
               <a
                 onClick={toggleNavigationHandler}
-                href={`#${linkTo}`}
+                href={`${linkTo}`}
                 className={classes.MobileNavigation_link}
                 active={String(linkTo === location.pathname)}
               >
