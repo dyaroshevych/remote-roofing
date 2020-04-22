@@ -15,7 +15,7 @@ const ContactPage = () => (
       </Wrapper>
     </Section>
     <Wrapper>
-      <div className={classes.FormContainer}>
+      <div className={classes.ContactFormContainer}>
         <Form
           submit="https://formspree.io/mvobjqar"
           appearance="box"
