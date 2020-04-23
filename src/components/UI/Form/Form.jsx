@@ -12,9 +12,11 @@ const Form = ({ submit, title, appearance = "inline", fields = [] }) => (
   >
     {title && <h3>{title}</h3>}
     {fields.map((field, idx) => (
-      <div className={classes.Form_field} key={idx}>
-        <Field {...{ ...field, appearance }} />
-      </div>
+      <Field
+        {...{ ...field, appearance }}
+        className={classes.Form_field}
+        key={idx}
+      />
     ))}
     <Button size={appearance === "box" ? "lg" : "md"}>Submit</Button>
   </form>

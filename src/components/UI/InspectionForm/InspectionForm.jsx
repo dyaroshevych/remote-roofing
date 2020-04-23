@@ -18,7 +18,7 @@ const InspectionForm = ({ forwardedRef }) => {
     setFormInfo(info);
   };
 
-  const changeVisibilityHandler = () => {
+  const toggleVisibilityHandler = () => {
     if (formInfo.address !== "" || formInfo.isVisible) {
       const info = { ...formInfo };
       info.isVisible = !info.isVisible;
@@ -57,7 +57,7 @@ const InspectionForm = ({ forwardedRef }) => {
           size="lg"
           click={(e) => {
             e.preventDefault();
-            changeVisibilityHandler();
+            toggleVisibilityHandler();
           }}
         >
           Get Inspection
@@ -65,7 +65,7 @@ const InspectionForm = ({ forwardedRef }) => {
       </form>
       <Modal
         isVisible={formInfo.isVisible}
-        changeVisibility={changeVisibilityHandler}
+        toggleVisibility={toggleVisibilityHandler}
       >
         <Form
           submit="https://formspree.io/xaydgbjk"

@@ -1,0 +1,43 @@
+@import "../../../../index.scss";
+
+.Textarea {
+  max-height: 200px;
+
+  &___inline {
+    padding: 0 0 7px 0;
+    height: fit-content;
+    border: 0;
+    border-bottom: 2px solid #929292;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 30px;
+
+    @include mobile-md {
+      max-width: 250px;
+      min-width: 250px;
+    }
+
+    @include mobile-sm {
+      max-width: 200px;
+      min-width: 200px;
+    }
+  }
+
+  &___box {
+    padding: 15px;
+    border: 1px solid #929292;
+    border-radius: 4px;
+    max-width: 460px;
+    min-width: 460px;
+    min-height: 52px;
+
+    @include mobile-md {
+      padding: 7px 10px;
+    }
+
+    @include mobile-lg {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}

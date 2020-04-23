@@ -1,0 +1,18 @@
+@import "../../../../index.scss";
+
+.Label {
+  &___inline {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &___box {
+    display: block;
+    margin-bottom: 5px;
+
+    @include mobile-md {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Input, Textarea } from "./";
-
-import classes from "./Field.module.scss";
+import { FieldContainer, Label, Input, Textarea } from "./";
 
 const Field = ({
   name,
@@ -13,17 +11,10 @@ const Field = ({
   maxLength = 1000,
   readOnly = false,
   appearance = "inline",
+  className,
 }) => (
-  <div className={[classes.Field, classes[`Field___${appearance}`]].join()}>
-    <label
-      className={[
-        classes.Field_label,
-        classes[`Field_label___${appearance}`],
-      ].join(" ")}
-      htmlFor={`field_${name}`}
-    >
-      {placeholder}:
-    </label>
+  <FieldContainer {...{ className }}>
+    <Label {...{ appearance, name }}>{placeholder}:</Label>
     {type === "textarea" ? (
       <Textarea
         {...{
@@ -32,7 +23,6 @@ const Field = ({
           defaultValue,
           placeholder,
           maxLength,
-          readOnly,
         }}
       />
     ) : (
@@ -49,7 +39,7 @@ const Field = ({
         }}
       />
     )}
-  </div>
+  </FieldContainer>
 );
 
 export default Field;

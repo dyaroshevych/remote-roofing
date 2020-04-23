@@ -4,14 +4,14 @@ import classes from "./Modal.module.scss";
 
 import { Backdrop } from "../";
 
-const Modal = ({ isVisible, changeVisibility, children }) => {
+const Modal = ({ isVisible, toggleVisibility, children }) => {
   return (
     <>
-      <Backdrop {...{ isVisible, changeVisibility }} />
+      <Backdrop {...{ isVisible, toggleVisibility }} />
       <div className={classes.Modal} isvisible={String(isVisible)}>
         <button
           className={classes.Modal_close}
-          onClick={changeVisibility}
+          onClick={toggleVisibility}
         ></button>
         {children}
       </div>

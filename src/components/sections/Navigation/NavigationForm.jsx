@@ -4,7 +4,7 @@ import { Modal, Form } from "../../UI";
 
 const NavigationForm = ({ visible, toggleVisibility }) => {
   return (
-    <Modal isVisible={visible} changeVisibility={toggleVisibility}>
+    <Modal isVisible={visible} {...{ toggleVisibility }}>
       <Form
         submit="https://formspree.io/xaydgbjk"
         title="Get Inspection"

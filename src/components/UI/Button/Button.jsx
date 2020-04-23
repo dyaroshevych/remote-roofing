@@ -4,7 +4,7 @@ import classes from "./Button.module.scss";
 
 const Button = ({ size, click, children, className }) => (
   <button
-    className={[classes.Button, className, classes[`Button--${size}`]].join(
+    className={[classes.Button, classes[`Button--${size}`], className].join(
       " "
     )}
     onClick={click}
