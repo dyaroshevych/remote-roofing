@@ -21,7 +21,7 @@ const MobileNavigation = ({ links, location }) => {
       </button>
       <Modal
         isVisible={navigationVisible}
-        changeVisibility={toggleNavigationHandler}
+        toggleVisibility={toggleNavigationHandler}
       >
         <h2>Navigation</h2>
         <ul className={classes.MobileNavigation_links}>
