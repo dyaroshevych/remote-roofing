@@ -8,3 +8,4 @@ export { default as Inspection } from "./Inspection/Inspection";
 export { default as Footer } from "./Footer/Footer";
 export { default as TypesOfRoofing } from "./TypesOfRoofing/TypesOfRoofing";
 export { default as AboutUs } from "./AboutUs/AboutUs";
+export { default as CovidWarning } from "./CovidWarning/CovidWarning";

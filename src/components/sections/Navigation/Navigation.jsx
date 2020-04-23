@@ -7,7 +7,7 @@ import { MobileNavigation, NavigationForm } from "./";
 
 import classes from "./Navigation.module.scss";
 
-const Navigation = withRouter(({ location }) => {
+const Navigation = withRouter(({ location, ...props }) => {
   const links = [
     {
       name: "Residential",
@@ -28,7 +28,7 @@ const Navigation = withRouter(({ location }) => {
   const toggleFormHandler = () => setFormVisible(!formVisible);
 
   return (
-    <nav className={classes.Navigation}>
+    <nav className={classes.Navigation} fixed={String(props.isFixed)}>
       <Wrapper>
         <ul className={classes.Navigation_list}>
           <li className={classes.Navigation_groupContainer}>
