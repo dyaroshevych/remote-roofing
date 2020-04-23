@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { debounce } from "lodash";
 import { withRouter } from "react-router-dom";
 
 import { Wrapper } from "../../../hoc";
@@ -7,7 +8,7 @@ import { MobileNavigation, NavigationForm } from "./";
 
 import classes from "./Navigation.module.scss";
 
-const Navigation = withRouter(({ location, ...props }) => {
+const Navigation = withRouter(({ location }) => {
   const links = [
     {
       name: "Residential",
@@ -23,12 +24,26 @@ const Navigation = withRouter(({ location, ...props }) => {
     },
   ];
 
+  const [isFixed, setFixed] = useState(false);
+
+  useEffect(() => {
+    const warningHeight = document.querySelector("#covid-warning").offsetHeight;
+
+    window.onscroll = debounce(() => {
+      if (window.scrollY < warningHeight) {
+        setFixed(false);
+      } else if (window.scrollY >= warningHeight) {
+        setFixed(true);
+      }
+    }, 20);
+  }, []);
+
   const [formVisible, setFormVisible] = useState(false);
 
   const toggleFormHandler = () => setFormVisible(!formVisible);
 
   return (
-    <nav className={classes.Navigation} fixed={String(props.isFixed)}>
+    <nav className={classes.Navigation} fixed={String(isFixed)}>
       <Wrapper>
         <ul className={classes.Navigation_list}>
           <li className={classes.Navigation_groupContainer}>
