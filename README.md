@@ -10,5 +10,8 @@ Technologies used:
 React tools used:
 
 - CSS(SASS) modules
+- React Router
+- Algolia Places API
 
 Deployed with: GitHub Pages
+Hosted using: Firebase

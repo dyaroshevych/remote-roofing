@@ -21,7 +21,7 @@ const Residential = () => {
       imageUrl: residential2Jpg,
       title: "Customizable Solutions",
       text:
-        "At Remote Roofing, we pride ourselves in differentiating from the competition. When weapproach each project, we understand that each client is unique. We develop acustomized solution to satisfy the needs of that job and familiarize clients with theinformation that’s most relative to them and their home.",
+        "At Remote Roofing, we pride ourselves in differentiating from the competition. When weapproach each project, we understand that each client is unique. We develop acustomized solution to satisfy the needs of that job and familiarize clients with the information that’s most relative to them and their home.",
     },
     {
       imageUrl: residential3Jpg,
