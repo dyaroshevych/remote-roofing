@@ -43,61 +43,63 @@ const Navigation = withRouter(({ location }) => {
   const toggleFormHandler = () => setFormVisible(!formVisible);
 
   return (
-    <nav className={classes.Navigation} fixed={String(isFixed)}>
-      <Wrapper>
-        <ul className={classes.Navigation_list}>
-          <li className={classes.Navigation_groupContainer}>
-            <ul className={classes.Navigation_group}>
-              <Logo />
-              {links.map(({ name, linkTo }) => (
-                <li
-                  className={classes.Navigation_linkContainer}
-                  key={`navigation-link-${linkTo}`}
-                >
-                  <a
-                    href={`${linkTo}`}
-                    className={classes.Navigation_link}
-                    active={String(linkTo === location.pathname)}
+    <>
+      <nav className={classes.Navigation} fixed={String(isFixed)}>
+        <Wrapper>
+          <ul className={classes.Navigation_list}>
+            <li className={classes.Navigation_groupContainer}>
+              <ul className={classes.Navigation_group}>
+                <Logo />
+                {links.map(({ name, linkTo }) => (
+                  <li
+                    className={classes.Navigation_linkContainer}
+                    key={`navigation-link-${linkTo}`}
                   >
-                    {name}
+                    <a
+                      href={`${linkTo}`}
+                      className={classes.Navigation_link}
+                      active={String(linkTo === location.pathname)}
+                    >
+                      {name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li className={classes.Navigation_groupContainer}>
+              <ul className={classes.Navigation_group}>
+                <li className={classes.Navigation_linkContainer}>
+                  <a
+                    href="/login"
+                    className={classes.Navigation_link}
+                    active={String("/login" === location.pathname)}
+                  >
+                    Log In
                   </a>
                 </li>
-              ))}
-            </ul>
-          </li>
-          <li className={classes.Navigation_groupContainer}>
-            <ul className={classes.Navigation_group}>
-              <li className={classes.Navigation_linkContainer}>
-                <a
-                  href="/login"
-                  className={classes.Navigation_link}
-                  active={String("/login" === location.pathname)}
-                >
-                  Log In
-                </a>
-              </li>
-              <Button size={"md"} click={toggleFormHandler}>
-                Get Inspection
-              </Button>
-            </ul>
-          </li>
-        </ul>
-        <NavigationForm
-          visible={formVisible}
-          toggleVisibility={toggleFormHandler}
-        />
-        <MobileNavigation
-          links={[
-            ...links,
-            {
-              name: "Log In",
-              linkTo: "/login",
-            },
-          ]}
-          {...{ location }}
-        />
-      </Wrapper>
-    </nav>
+                <Button size={"md"} click={toggleFormHandler}>
+                  Get Inspection
+                </Button>
+              </ul>
+            </li>
+          </ul>
+          <MobileNavigation
+            links={[
+              ...links,
+              {
+                name: "Log In",
+                linkTo: "/login",
+              },
+            ]}
+            {...{ location }}
+          />
+        </Wrapper>
+      </nav>
+      <NavigationForm
+        visible={formVisible}
+        toggleVisibility={toggleFormHandler}
+      />
+    </>
   );
 });
 
