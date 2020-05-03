@@ -11,25 +11,17 @@
 }
 
 .Navigation {
-  position: relative;
+  position: sticky;
+  top: -1px;
   z-index: 3;
-  left: 0;
-  top: 0;
-  width: 100%;
   background-color: #fff;
   height: 85px;
   padding: 20px 30px 80px;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
   margin-bottom: -100px;
 
   @include mobile-lg {
     margin-bottom: -80px;
-  }
-
-  &[fixed="true"] {
-    position: fixed;
-    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2);
-    margin-bottom: 0;
-    animation: scrollIn 0.25s ease;
   }
 
   @include laptop {

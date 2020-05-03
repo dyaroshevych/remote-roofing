@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { debounce } from "lodash";
+import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 
 import { Wrapper } from "../../../hoc";
@@ -24,27 +23,13 @@ const Navigation = withRouter(({ location }) => {
     },
   ];
 
-  const [isFixed, setFixed] = useState(false);
-
-  useEffect(() => {
-    const warningHeight = document.querySelector("#covid-warning").offsetHeight;
-
-    window.onscroll = debounce(() => {
-      if (window.scrollY < warningHeight) {
-        setFixed(false);
-      } else if (window.scrollY >= warningHeight) {
-        setFixed(true);
-      }
-    }, 20);
-  }, []);
-
   const [formVisible, setFormVisible] = useState(false);
 
   const toggleFormHandler = () => setFormVisible(!formVisible);
 
   return (
     <>
-      <nav className={classes.Navigation} fixed={String(isFixed)}>
+      <nav className={classes.Navigation}>
         <Wrapper>
           <ul className={classes.Navigation_list}>
             <li className={classes.Navigation_groupContainer}>
