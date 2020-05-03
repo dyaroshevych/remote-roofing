@@ -24,8 +24,8 @@
 
       &::after {
         background-image: linear-gradient(
-          transparent 0%,
-          transparent calc(100% - 60px),
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) calc(100% - 60px),
           #fff calc(100% - 10px),
           #fff 100%
         );
