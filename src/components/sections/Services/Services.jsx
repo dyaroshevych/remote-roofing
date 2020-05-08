@@ -50,7 +50,7 @@ const Services = () => {
               <div className={classes.Services_itemTextContainer}>
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <a href={`#${linkTo}`}>
+                <a href={`${linkTo}`}>
                   <Button size="md">Read more</Button>
                 </a>
               </div>
