@@ -36,7 +36,7 @@ const CovidWarning = () => {
             health!
           </b>{" "}
           For further information on our services and discounts, contact us at
-          (682) 218-9336.
+          (214) 865-8818.
         </p>
       </div>
       {!infoExpanded && (
